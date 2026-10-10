@@ -109,12 +109,12 @@ namespace Entitas.Unity.Editor
         static EntitasHierarchyIcon()
         {
             SystemWarningThreshold = EntitasSettings.Instance.SystemWarningThreshold;
-            EditorApplication.hierarchyWindowItemOnGUI += OnHierarchyWindowItemOnGUI;
+            EditorApplication.hierarchyWindowItemByEntityIdOnGUI += OnHierarchyWindowItemOnGUI;
         }
 
-        static void OnHierarchyWindowItemOnGUI(int instanceID, Rect selectionRect)
+        static void OnHierarchyWindowItemOnGUI(EntityId entityId, Rect selectionRect)
         {
-            var gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
+            var gameObject = EditorUtility.EntityIdToObject(entityId) as GameObject;
             if (gameObject == null)
                 return;
 
