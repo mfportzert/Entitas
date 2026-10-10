@@ -19,7 +19,11 @@ namespace Entitas.Unity.Editor
                     }
                     else
                     {
-                        var path = $"Assets/Editor/{nameof(EntitasSettings)}.asset";
+                        const string folder = "Assets/Editor";
+                        if (!AssetDatabase.IsValidFolder(folder))
+                            AssetDatabase.CreateFolder("Assets", "Editor");
+
+                        var path = $"{folder}/{nameof(EntitasSettings)}.asset";
                         AssetDatabase.CreateAsset(CreateInstance<EntitasSettings>(), path);
                         _instance = AssetDatabase.LoadAssetAtPath<EntitasSettings>(path);
                         AssetDatabase.SetLabels(_instance, new[] { nameof(EntitasSettings) });
