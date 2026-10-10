@@ -93,7 +93,5 @@ namespace Entitas
         protected abstract void RemoveEntity(TKey key, TEntity entity);
 
         protected abstract void Clear();
-
-        ~AbstractEntityIndex() => Deactivate();
     }
 }

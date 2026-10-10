@@ -109,7 +109,5 @@ namespace Entitas
         {
             return _toStringCache ??= "Collector(" + string.Join(", ", _groups.Select(group => group.ToString())) + ")";
         }
-
-        ~Collector() => Deactivate();
     }
 }

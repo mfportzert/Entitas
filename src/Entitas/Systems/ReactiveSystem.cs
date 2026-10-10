@@ -81,7 +81,5 @@ namespace Entitas
         }
 
         public override string ToString() => _toStringCache ??= $"ReactiveSystem({GetType().Name})";
-
-        ~ReactiveSystem() => Deactivate();
     }
 }
