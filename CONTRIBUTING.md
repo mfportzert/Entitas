@@ -23,10 +23,10 @@ $ git branch master origin/master
 $ git flow init -d
 ````
 
-Open `Entitas.sln` and run the Tests project as a console application to ensure everything works as expected. Alternatively run the tests script
+Open `Entitas.sln` and run the Tests project as a console application to ensure everything works as expected. Alternatively run the tests from the command line
 
 ```
-$ ./Scripts/bee tests
+$ dotnet test Entitas.sln
 ```
 
 Make changes
@@ -41,11 +41,10 @@ $ git flow feature start <#123-your-feature>
 Write and update unit tests and make sure all the existing tests pass. To manually test your changes in a Unity project, run
 
 ```
-$ ./Scripts/bee build
-$ ./Scripts/bee sync
+$ dotnet build -c Release Entitas.sln
 ```
 
-This will build Entitas with all your changes and copy all required assemblies to the Tests/Unity/VisualDebugging project's `Library` folder. You can open the Tests/Unity/VisualDebugging project in Unity and verify and test your changes manually. All changes to Entitas must be done in the `Entitas.sln` project.
+Then copy the built assemblies (`Entitas.dll`, `Entitas.Unity.dll`, `Entitas.Unity.Editor.dll`, `Entitas.CodeGeneration.dll` and `Entitas.CodeGeneration.Attributes.dll`) into your Unity project and verify and test your changes manually. All changes to Entitas must be done in the `Entitas.sln` project.
 
 
 Contribute

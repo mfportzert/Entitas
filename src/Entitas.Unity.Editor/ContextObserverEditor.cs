@@ -1,5 +1,4 @@
 using System.Linq;
-using DesperateDevs.Unity.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,6 +10,12 @@ namespace Entitas.Unity.Editor
         public override void OnInspectorGUI()
         {
             var contextObserver = (ContextObserverBehaviour)target;
+            if (contextObserver.Context == null)
+            {
+                // Context isn't serialized, so it's lost after a domain reload while playing
+                EditorGUILayout.HelpBox("Context is not available (domain reload during play mode). Restart play mode.", MessageType.Info);
+                return;
+            }
 
             EditorLayout.BeginVerticalBox();
             {

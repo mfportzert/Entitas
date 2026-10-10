@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Linq;
-using DesperateDevs.Extensions;
-using DesperateDevs.Unity.Editor;
 using UnityEditor;
 
 namespace Entitas.Unity.Editor

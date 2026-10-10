@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using DesperateDevs.Unity.Editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -55,6 +54,12 @@ namespace Entitas.Unity.Editor
         {
             var debugSystemsBehaviour = (DebugSystemsBehaviour)target;
             var systems = debugSystemsBehaviour.Systems;
+            if (systems == null)
+            {
+                // Systems isn't serialized, so it's lost after a domain reload while playing
+                EditorGUILayout.HelpBox("Systems are not available (domain reload during play mode). Restart play mode.", MessageType.Info);
+                return;
+            }
 
             EditorGUILayout.Space();
             DrawSystemsOverview(systems);
