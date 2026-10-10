@@ -1,5 +1,5 @@
 ﻿// Contexts.g.cs
-public partial class Contexts : Entitas.IContexts
+public partial class Contexts
 {
     public static Contexts sharedInstance
     {
@@ -188,7 +188,7 @@ public sealed partial class GameMatcher
             if (_matcherTestEvent == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.TestEvent);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherTestEvent = matcher;
             }
 
@@ -237,7 +237,7 @@ public sealed partial class GameMatcher
             if (_matcherTestEventListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.TestEventListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherTestEventListener = matcher;
             }
 

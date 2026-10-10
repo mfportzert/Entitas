@@ -277,7 +277,7 @@ ${memberAssignmentList}
             if (_matcher${ComponentName} == null)
             {
                 var matcher = (Entitas.Matcher<${EntityType}>)Entitas.Matcher<${EntityType}>.AllOf(${Index});
-                matcher.componentNames = ${componentNames};
+                matcher.ComponentNames = ${componentNames};
                 _matcher${ComponentName} = matcher;
             }
 

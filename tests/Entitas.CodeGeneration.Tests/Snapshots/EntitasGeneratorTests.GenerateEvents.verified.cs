@@ -105,7 +105,7 @@ public sealed class AnyTestEventRemovedListenerComponent : Entitas.IComponent
 
 
 // Contexts.g.cs
-public partial class Contexts : Entitas.IContexts
+public partial class Contexts
 {
     public static Contexts sharedInstance
     {
@@ -194,7 +194,7 @@ public sealed partial class GameMatcher
             if (_matcherAnyTestEventListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.AnyTestEventListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherAnyTestEventListener = matcher;
             }
 
@@ -271,7 +271,7 @@ public sealed partial class GameMatcher
             if (_matcherAnyTestEventRemovedListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.AnyTestEventRemovedListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherAnyTestEventRemovedListener = matcher;
             }
 
@@ -456,7 +456,7 @@ public sealed partial class GameMatcher
             if (_matcherGameNamespaceAnyTestEvent3Listener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameNamespaceAnyTestEvent3Listener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherGameNamespaceAnyTestEvent3Listener = matcher;
             }
 
@@ -533,7 +533,7 @@ public sealed partial class GameMatcher
             if (_matcherGameNamespaceAnyTestEvent3RemovedListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameNamespaceAnyTestEvent3RemovedListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherGameNamespaceAnyTestEvent3RemovedListener = matcher;
             }
 
@@ -635,7 +635,7 @@ public sealed partial class GameMatcher
             if (_matcherNamespaceAnyTestEvent2Listener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NamespaceAnyTestEvent2Listener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherNamespaceAnyTestEvent2Listener = matcher;
             }
 
@@ -712,7 +712,7 @@ public sealed partial class GameMatcher
             if (_matcherNamespaceAnyTestEvent2RemovedListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NamespaceAnyTestEvent2RemovedListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherNamespaceAnyTestEvent2RemovedListener = matcher;
             }
 
@@ -895,7 +895,7 @@ public sealed partial class GameMatcher
             if (_matcherNamespaceTestEvent2 == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NamespaceTestEvent2);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherNamespaceTestEvent2 = matcher;
             }
 
@@ -944,7 +944,7 @@ public sealed partial class GameMatcher
             if (_matcherNamespaceTestEvent3 == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NamespaceTestEvent3);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherNamespaceTestEvent3 = matcher;
             }
 
@@ -993,7 +993,7 @@ public sealed partial class GameMatcher
             if (_matcherTestEvent == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.TestEvent);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherTestEvent = matcher;
             }
 
@@ -1042,7 +1042,7 @@ public sealed partial class GameMatcher
             if (_matcherTestEventListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.TestEventListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherTestEventListener = matcher;
             }
 
@@ -1119,7 +1119,7 @@ public sealed partial class GameMatcher
             if (_matcherTestEventRemovedListener == null)
             {
                 var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.TestEventRemovedListener);
-                matcher.componentNames = GameComponentsLookup.componentNames;
+                matcher.ComponentNames = GameComponentsLookup.componentNames;
                 _matcherTestEventRemovedListener = matcher;
             }
 
@@ -1346,7 +1346,7 @@ public sealed partial class InputMatcher
             if (_matcherInputNamespaceAnyTestEvent3Listener == null)
             {
                 var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.InputNamespaceAnyTestEvent3Listener);
-                matcher.componentNames = InputComponentsLookup.componentNames;
+                matcher.ComponentNames = InputComponentsLookup.componentNames;
                 _matcherInputNamespaceAnyTestEvent3Listener = matcher;
             }
 
@@ -1423,7 +1423,7 @@ public sealed partial class InputMatcher
             if (_matcherInputNamespaceAnyTestEvent3RemovedListener == null)
             {
                 var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.InputNamespaceAnyTestEvent3RemovedListener);
-                matcher.componentNames = InputComponentsLookup.componentNames;
+                matcher.ComponentNames = InputComponentsLookup.componentNames;
                 _matcherInputNamespaceAnyTestEvent3RemovedListener = matcher;
             }
 
@@ -1631,7 +1631,7 @@ public sealed partial class InputMatcher
             if (_matcherNamespaceTestEvent3 == null)
             {
                 var matcher = (Entitas.Matcher<InputEntity>)Entitas.Matcher<InputEntity>.AllOf(InputComponentsLookup.NamespaceTestEvent3);
-                matcher.componentNames = InputComponentsLookup.componentNames;
+                matcher.ComponentNames = InputComponentsLookup.componentNames;
                 _matcherNamespaceTestEvent3 = matcher;
             }
 

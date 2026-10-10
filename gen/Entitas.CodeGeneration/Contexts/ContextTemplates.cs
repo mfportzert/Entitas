@@ -3,7 +3,7 @@ namespace Entitas.CodeGeneration.Contexts;
 public static class ContextTemplates
 {
     public const string ContextsTemplate =
-        @"public partial class Contexts : Entitas.IContexts
+        @"public partial class Contexts
 {
     public static Contexts sharedInstance
     {

@@ -62,7 +62,7 @@ public class Feature : Entitas.Systems
         }
     }
 #else
-    public class Feature : Systems
+    public class Feature : Entitas.Systems
     {
         public Feature(string name) { }
 
