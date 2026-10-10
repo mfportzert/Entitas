@@ -10,7 +10,7 @@
     <When Condition="$([MSBuild]::IsOsPlatform(OSX))">
       <PropertyGroup>
         <OSApplicationPath>/Applications</OSApplicationPath>
-        <UnityManagedPath>Unity.app/Contents/Managed</UnityManagedPath>
+        <UnityManagedPath>Unity.app/Contents/Resources/Scripting/Managed</UnityManagedPath>
       </PropertyGroup>
     </When>
     <When Condition="$([MSBuild]::IsOsPlatform(Linux))">
